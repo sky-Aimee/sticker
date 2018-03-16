@@ -1,0 +1,35 @@
+<!--pages/uploadImg/uploadImg.wxml-->
+<image class='width-full bg-img' mode="widthFix" src='../../images/choseImg-bg.png'></image>
+<view class='top-box flex flex-vc flex-hc'>
+  <movable-area class='img-box width-full' style="width:320px; height:178.133px">
+    <image class='original-img' src='{{imgUrl}}'></image>
+
+    <!-- 贴图开始 -->
+    <movable-view wx:if="{{chosedImg}}" style="transform:translate({{stv.offsetX}}px, {{stv.offsetY}}px);width:{{stv.width}}px;height:{{stv.height}}px" x="{{x}}" y="{{y}}" direction="all">
+      <view class='sticker-box' style=' rotate({{Img.rotate}}deg)' catchtouchstart="touchstartCallback" catchtouchmove="touchmoveCallback" catchtouchend="touchendCallback">
+        <image class='sticker width-full' mode="widthFix" src="{{chosedImg}}"></image>
+      </view>
+      <image class='cancel' bindtap='cancel' src='../../images/cancel.png'></image>
+    </movable-view>
+    <!-- 贴图结束 -->
+  </movable-area>
+</view>
+
+<!-- canvas绘图 -->
+<view class="canvas-box" style='padding-bottom:150px;padding: 20px;'>
+  <canvas style="width: 640px; height: 356.266px;" canvas-id="mycanvas" />
+</view>
+<!-- canvas绘图 -->
+
+<view class='bottom'>
+  <view class="sticker-lists-body">
+    <scroll-view class="recommend_scroll_x_box" scroll-x="true">
+      <view class="sticker-list" wx:for="{{stickers}}" data-url="{{item}}" bindtap='changeImg'>
+        <image src='{{item}}'></image>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='tab'>
+    <button class='color-white' bindtap='save'>保存 </button>
+  </view>
+</view>

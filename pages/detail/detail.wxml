@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<view class='flex flex-hc flex-vc'>
+  <image src='{{path}}'></image>
+</view>

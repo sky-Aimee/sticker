@@ -1,0 +1,7 @@
+/* pages/detail/detail.wxss */
+
+image{
+  width: 320px;
+  height: 178px;
+  margin: 100rpx auto;
+}

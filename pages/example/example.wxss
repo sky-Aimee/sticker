@@ -1,0 +1,159 @@
+/* pages/uploadImg/uploadImg.wxss */
+page {
+  height: 100%;
+}
+.top-box  {
+  padding: 20rpx 30rpx;
+  height: calc(100% - 182px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.original-img {
+  width: 320px;
+  height: 178px;
+  margin: 0 auto;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(230,225,225,0.8);
+}
+
+.bottom>view.tab {
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+}
+
+.bottom>view.sticker-lists-body{
+  padding-left: 30rpx;
+}
+
+.recommend_scroll_x_box {
+  height: 100rpx;
+  padding-top: 30rpx;
+  padding-bottom: 40rpx;
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  vertical-align: top;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.sticker-lists-body {
+  padding-left: 30rpx;
+}
+
+.sticker-lists-body .sticker-list {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 24rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.sticker-lists-body .sticker-list image {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+}
+
+.bottom image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.bottom .tab image {
+  margin-right: 60rpx;
+}
+
+.bottom .tab {
+  padding: 25rpx 60rpx;
+  background-color: #f4f4f4;
+  height: 70rpx;
+}
+
+.bottom .tab .tab-list {
+  position: relative;
+  float: left;
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.bottom .tab button{
+  background-color: #d81e06;
+  float: right;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+
+.bottom .tab button.color-red {
+  background-color: #fff;
+  border: 1rpx solid #d81e06;
+  margin-right: 10rpx;
+}
+
+.bottom .tab .tab-list image.active::before {
+  content: '';
+  position: absolute;
+  top: -50rpx;
+  left: 5rpx;
+  border-right: 20rpx solid transparent;
+  border-left: 20rpx solid transparent;
+  border-bottom: 20rpx solid #f4f4f4;
+}
+
+
+
+
+
+movable-view {
+  height: 50px;
+  width: 50px;
+}
+
+movable-view .sticker-box {
+  position: relative;
+  width:100%;
+  height: 100%;
+  border: 1rpx dashed #ccc;
+}
+
+image.cancel {
+  position: absolute;
+  top: -15rpx;
+  left: -15rpx;
+  width:30rpx;
+  height: 30rpx;
+  z-index: 30;
+}
+
+.canvas-box {
+  opacity: 0;
+  position: fixed;
+  top: 100%; 
+  left: 0;
+  z-index: -1;
+}  
+
+.canvas-box canvas {
+  opacity: 0;
+} 

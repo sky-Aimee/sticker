@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/example/example",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "canvas实现贴图",
+    "navigationBarTextStyle": "black"
+  }
+}
